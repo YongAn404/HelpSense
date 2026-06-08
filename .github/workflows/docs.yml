@@ -28,11 +28,11 @@ jobs:
       with:
         dotnet-version: '10.x'
 
-    - name: Install .NET Framework reference assemblies
-      run: dotnet add package Microsoft.NETFramework.ReferenceAssemblies.net48 --version 1.0.3
-
     - name: Restore NuGet packages
       run: dotnet restore HelpSense.sln
+
+    - name: Install .NET Framework reference assemblies
+      run: dotnet add package Microsoft.NETFramework.ReferenceAssemblies.net48 --version 1.0.3
 
     - name: Install DocFX
       run: |
